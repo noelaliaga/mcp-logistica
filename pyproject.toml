@@ -27,7 +27,9 @@ dev = [
 ]
 
 [project.scripts]
+wms-mcp = "wms_mcp.server:main"
 wms-seed = "wms_mcp.seed:main"
+wms-report = "wms_mcp.calllog:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

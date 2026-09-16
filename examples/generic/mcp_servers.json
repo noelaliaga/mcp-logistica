@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "wms": {
+      "command": "/ABSOLUTE/PATH/TO/mcp-logistica/.venv/bin/python",
+      "args": ["-m", "wms_mcp.server"],
+      "env": {
+        "WMS_DB_PATH": "/ABSOLUTE/PATH/TO/mcp-logistica/data/wms.sqlite",
+        "WMS_WRITE_MODE": "dry_run"
+      }
+    }
+  }
+}
