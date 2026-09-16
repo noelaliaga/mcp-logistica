@@ -41,3 +41,6 @@ jobs:
 
       - name: Seed CLI smoke
         run: wms-seed --db data/wms.sqlite
+
+      - name: Offline agent evaluation (scripted, no model API calls)
+        run: wms-eval --out evals/out

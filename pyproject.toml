@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mcp-logistica"
 version = "0.1.0"
-description = "MCP server that lets an AI agent query and operate a warehouse management system (WMS) with restricted writes and a database-level audit trail."
+description = "MCP server that lets an AI agent query and operate a warehouse management system (WMS) with restricted writes, a database-level audit trail and an offline agent evaluation harness."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Noel Aliaga" }]
@@ -25,10 +25,15 @@ dev = [
     "pytest>=9.1,<10",
     "ruff>=0.16.7,<0.17",
 ]
+# Only for `make eval-live`. Not installed or exercised by the test suite or CI.
+live = [
+    "litellm",
+]
 
 [project.scripts]
 wms-mcp = "wms_mcp.server:main"
 wms-seed = "wms_mcp.seed:main"
+wms-eval = "wms_mcp.agent.evals:main"
 wms-report = "wms_mcp.calllog:main"
 
 [tool.setuptools.packages.find]
