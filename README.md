@@ -198,7 +198,9 @@ is self-declared (a script can claim to be `ui`), and anyone who can open the fi
 would record `session_user`, an identity the writer cannot choose without that role's
 credentials. The pattern comes from a private CRM tool I built in August 2026, whose audit
 trigger recorded the Postgres role behind every change. That tool kept its column allowlist
-only in Python. Moving the allowlist into the database is the main change here. Details are
+only in Python. Moving the allowlist into the database is the main change here; its
+cleaned-up public version, [`agent-crm-mcp`](https://github.com/noelaliaga/agent-crm-mcp),
+later took the same step with column grants. Details are
 in [`docs/decisions.md`](docs/decisions.md).
 
 ## Agent harness and offline evaluation

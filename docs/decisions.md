@@ -10,7 +10,8 @@ Each entry states the decision, why, what it costs and how it is verified.
 **Decision.** The server uses the official Python SDK (`mcp`, `mcp.server.fastmcp`) over stdio.
 
 **Where the pattern comes from.** The design is a port of a small MCP server I wrote in
-August 2026 for a private CRM tool (Postgres behind PostgREST). That server was standard
+August 2026 for a private CRM tool (Postgres behind PostgREST), published later in cleaned-up
+form as [`agent-crm-mcp`](https://github.com/noelaliaga/agent-crm-mcp). That server was standard
 library only: a JSON-RPC 2.0 loop over stdio with `initialize`, `tools/list` and
 `tools/call`, a Python allowlist of writable columns, a resolver that refused to pick
 between several name matches, and a database trigger that recorded every change with
