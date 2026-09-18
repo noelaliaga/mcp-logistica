@@ -106,8 +106,17 @@ The design question is not "what can the agent do?" but **"what happens when it 
 confidently wrong?"**. In a warehouse the answer is physical: a parcel held, a customer told
 the wrong thing, a picker sent to an empty bin.
 
-> Five years of picking and packing orders taught me that a wrong value in the system costs
-> more than a missing one. That's why this agent would rather ask than assume.
+> Five years supervising production at a manufacturing plant, and warehouse work before that,
+> taught me that a wrong value in the system costs more than a missing one. That's why this
+> agent would rather ask than assume.
+
+**Where this comes from.** I supervise production at a manufacturing plant: quality checks on
+assembly and packaging, labelling, stock counts and stock-outs, dispatching packaged goods
+with their delivery notes, receiving carriers, moving pallets, boxes and reels between
+buildings by forklift and electric pallet truck, and training new staff. Before that I worked
+in warehouses, unloading trucks by hand and picking orders. Every one of those steps is a place
+where the status in a system and the state on the floor can disagree. That gap is what this
+server is designed around.
 
 - **Reject, don't repair.** The server returns an error for all of these:
   - an invented status (`lost_in_transit`);
